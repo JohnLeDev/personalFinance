@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.lean.moneynote.User.dto.UserDTO;
+import com.lean.moneynote.User.dto.AccountDTO;
 
 @RestController
 @RequestMapping("/api/v1/user")
@@ -18,7 +18,8 @@ public class UserController {
 	}
 	
 	@PostMapping("/insert")
-	public ResponseEntity<UserDTO> insertUser(@RequestBody UserDTO userDTO){
-		return
+	public ResponseEntity<AccountDTO> insertUser(@RequestBody AccountDTO userDTO){
+		
+		return null;
 	}
 }
