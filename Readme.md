@@ -1,0 +1,1 @@
+docker run --name personalfinance -e MYSQL_ROOT_PASSWORD=personalFinance -p 3330:3306 -d mysql

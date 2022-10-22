@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+  <context id="DB2Tables" targetRuntime="MyBatis3">
+    <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+        connectionURL="jdbc:mysql://localhost:3330/personalfinance"
+        userId="root"
+        password="personalFinance">
+    </jdbcConnection>
+
+    <javaTypeResolver >
+      <property name="forceBigDecimals" value="false" />
+    </javaTypeResolver>
+
+    <javaModelGenerator targetPackage="com.lean.moneynote.model" targetProject="PersonalFinance" />
+
+    <sqlMapGenerator targetPackage="com.lean.moneynote.PersonalFinance.mapper.sql"  targetProject="PersonalFinance"/>
+
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.lean.moneynote.mapper"  targetProject="PersonalFinance"/>
+
+ 	<table  tableName="account" domainObjectName="Account" >
+    </table>
+    <table  tableName="catagory" domainObjectName="Catagory" >
+    </table>
+    <table  tableName="ledger" domainObjectName="Ledger" >
+    </table>
+
+  </context>
+</generatorConfiguration>
